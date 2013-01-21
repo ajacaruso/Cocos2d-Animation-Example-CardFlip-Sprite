@@ -1,35 +1,33 @@
-//
-//  IntroLayer.m
-//  FlipCardExample
-//
-//  Created by Adam Jacaruso on 1/21/13.
-//  Copyright __MyCompanyName__ 2013. All rights reserved.
-//
+//FlipCardExample
 
+//Copyright 2013 Adam Jacaruso
 
-// Import the interfaces
+//Licensed under the Apache License, Version 2.0 (the "License");
+//you may not use this file except in compliance with the License.
+//You may obtain a copy of the License at
+
+//http://www.apache.org/licenses/LICENSE-2.0
+
+//Unless required by applicable law or agreed to in writing, software
+//distributed under the License is distributed on an "AS IS" BASIS,
+//WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//See the License for the specific language governing permissions and
+//limitations under the License.
+
 #import "IntroLayer.h"
 #import "HelloWorldLayer.h"
 
 
 #pragma mark - IntroLayer
 
-// HelloWorldLayer implementation
 @implementation IntroLayer
 
-// Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
-	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
 	IntroLayer *layer = [IntroLayer node];
+    [scene addChild: layer];
 	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	
-	// return the scene
 	return scene;
 }
 
@@ -38,7 +36,6 @@
 {
 	[super onEnter];
 
-	// ask director for the window size
 	CGSize size = [[CCDirector sharedDirector] winSize];
 
 	CCSprite *background;
@@ -51,10 +48,7 @@
 	}
 	background.position = ccp(size.width/2, size.height/2);
 
-	// add the label as a child to this Layer
 	[self addChild: background];
-	
-	// In one second transition to the new scene
 	[self scheduleOnce:@selector(makeTransition:) delay:1];
 }
 

@@ -133,6 +133,11 @@
 		AA426DA816ADF6D10052D5A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA426DA716ADF6D10052D5A8 /* AppDelegate.m */; };
 		AA426DAB16ADF6D10052D5A8 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA426DAA16ADF6D10052D5A8 /* HelloWorldLayer.m */; };
 		AA426DAE16ADF6D10052D5A8 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA426DAD16ADF6D10052D5A8 /* IntroLayer.m */; };
+		AA426DB616ADF76B0052D5A8 /* SpriteFlipCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AA426DB516ADF76B0052D5A8 /* SpriteFlipCard.m */; };
+		AA426DC016ADFC930052D5A8 /* SideOne.png in Resources */ = {isa = PBXBuildFile; fileRef = AA426DBC16ADFC930052D5A8 /* SideOne.png */; };
+		AA426DC116ADFC930052D5A8 /* SideOne@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA426DBD16ADFC930052D5A8 /* SideOne@2x.png */; };
+		AA426DC216ADFC930052D5A8 /* SideTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA426DBE16ADFC930052D5A8 /* SideTwo.png */; };
+		AA426DC316ADFC930052D5A8 /* SideTwo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA426DBF16ADFC930052D5A8 /* SideTwo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +403,12 @@
 		AA426DAA16ADF6D10052D5A8 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		AA426DAC16ADF6D10052D5A8 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		AA426DAD16ADF6D10052D5A8 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		AA426DB416ADF76B0052D5A8 /* SpriteFlipCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteFlipCard.h; sourceTree = "<group>"; };
+		AA426DB516ADF76B0052D5A8 /* SpriteFlipCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteFlipCard.m; sourceTree = "<group>"; };
+		AA426DBC16ADFC930052D5A8 /* SideOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SideOne.png; path = FlipCardExample/Images/SideOne.png; sourceTree = "<group>"; };
+		AA426DBD16ADFC930052D5A8 /* SideOne@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SideOne@2x.png"; path = "FlipCardExample/Images/SideOne@2x.png"; sourceTree = "<group>"; };
+		AA426DBE16ADFC930052D5A8 /* SideTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SideTwo.png; path = FlipCardExample/Images/SideTwo.png; sourceTree = "<group>"; };
+		AA426DBF16ADFC930052D5A8 /* SideTwo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SideTwo@2x.png"; path = "FlipCardExample/Images/SideTwo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +434,7 @@
 		AA426C0D16ADF6CF0052D5A8 = {
 			isa = PBXGroup;
 			children = (
+				AA426DBB16ADFB0E0052D5A8 /* Images */,
 				AA426C2E16ADF6CF0052D5A8 /* FlipCardExample */,
 				AA426C1B16ADF6CF0052D5A8 /* Frameworks */,
 				AA426C1916ADF6CF0052D5A8 /* Products */,
@@ -456,6 +468,8 @@
 		AA426C2E16ADF6CF0052D5A8 /* FlipCardExample */ = {
 			isa = PBXGroup;
 			children = (
+				AA426DB416ADF76B0052D5A8 /* SpriteFlipCard.h */,
+				AA426DB516ADF76B0052D5A8 /* SpriteFlipCard.m */,
 				AA426DA616ADF6D10052D5A8 /* AppDelegate.h */,
 				AA426DA716ADF6D10052D5A8 /* AppDelegate.m */,
 				AA426DA916ADF6D10052D5A8 /* HelloWorldLayer.h */,
@@ -832,6 +846,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA426DBB16ADFB0E0052D5A8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AA426DBC16ADFC930052D5A8 /* SideOne.png */,
+				AA426DBD16ADFC930052D5A8 /* SideOne@2x.png */,
+				AA426DBE16ADFC930052D5A8 /* SideTwo.png */,
+				AA426DBF16ADFC930052D5A8 /* SideTwo@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +920,10 @@
 				AA426C4516ADF6CF0052D5A8 /* Icon@2x.png in Resources */,
 				AA426C4816ADF6CF0052D5A8 /* iTunesArtwork in Resources */,
 				AA426D8616ADF6D10052D5A8 /* ChangeLog in Resources */,
+				AA426DC016ADFC930052D5A8 /* SideOne.png in Resources */,
+				AA426DC116ADFC930052D5A8 /* SideOne@2x.png in Resources */,
+				AA426DC216ADFC930052D5A8 /* SideTwo.png in Resources */,
+				AA426DC316ADFC930052D5A8 /* SideTwo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1038,7 @@
 				AA426DA816ADF6D10052D5A8 /* AppDelegate.m in Sources */,
 				AA426DAB16ADF6D10052D5A8 /* HelloWorldLayer.m in Sources */,
 				AA426DAE16ADF6D10052D5A8 /* IntroLayer.m in Sources */,
+				AA426DB616ADF76B0052D5A8 /* SpriteFlipCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
