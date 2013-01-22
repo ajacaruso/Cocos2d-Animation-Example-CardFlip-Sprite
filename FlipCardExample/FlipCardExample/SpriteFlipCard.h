@@ -18,7 +18,20 @@
 #import "cocos2d.h"
 
 @interface SpriteFlipCard : CCSprite {
-    
+    BOOL isOriginalFace;
+    CCTexture2D *textureOne;
+    CCTexture2D *textureTwo;
 }
+
+@property (nonatomic, assign) BOOL isOriginalFace;
+@property (nonatomic, retain) CCTexture2D *textureOne;
+@property (nonatomic, retain) CCTexture2D *textureTwo;
+
+- (SpriteFlipCard *)initSpriteFlipCardWithImageOne:(NSString *)SideOneImage andImageTwo:(NSString *)SideTwoImage;
+- (void)flipSpriteVertical:(float)duration;
+- (void)flipSpriteHorizontal:(float)duration;
+- (void)displayNewSide;
+- (void)setIsOriginalFace:(BOOL)newOriginalFace;
+- (bool)getIsOriginalFace;
 
 @end

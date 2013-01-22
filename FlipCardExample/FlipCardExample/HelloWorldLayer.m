@@ -15,12 +15,12 @@
 //limitations under the License.
 
 #import "HelloWorldLayer.h"
-
 #import "AppDelegate.h"
 
 #pragma mark - HelloWorldLayer
 
 @implementation HelloWorldLayer
+@synthesize cardSprite;
 
 +(CCScene *) scene
 {
@@ -35,7 +35,17 @@
 {
 	
 	if( (self=[super init]) ) {
-
+        CGSize windowSize = [[CCDirector sharedDirector] winSize];
+        
+        //Creating a new SpriteFlipCard and adding it
+        cardSprite = [[SpriteFlipCard alloc] initSpriteFlipCardWithImageOne:@"SideOne@2x.png" andImageTwo:@"SideTwo@2x.png"];
+        cardSprite.position =  ccp(windowSize.width /2 , windowSize.height/2 );
+        [self addChild:cardSprite];
+        
+        //Creating a timer to show the flip.
+        [self schedule:@selector(exampleFlips:) interval:3.0];
+        
+       
 	}
 	return self;
 }
@@ -44,6 +54,14 @@
 {
 	[super dealloc];
 }
+
+//Calling the cardSprites flipSprite functionality.
+-(void) exampleFlips:(ccTime)delta
+{
+    [cardSprite flipSpriteHorizontal:1.0f];
+    //[cardSprite flipSpriteVertical:1.0f];
+}
+
 
 #pragma mark GameKit delegate
 

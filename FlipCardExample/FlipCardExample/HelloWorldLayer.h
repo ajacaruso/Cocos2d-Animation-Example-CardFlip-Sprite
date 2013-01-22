@@ -18,11 +18,16 @@
 #import <GameKit/GameKit.h>
 
 #import "cocos2d.h"
+#import "SpriteFlipCard.h"
 
 @interface HelloWorldLayer : CCLayer
 {
-    
+    SpriteFlipCard *cardSprite;
 }
+
+@property (nonatomic, retain) SpriteFlipCard *cardSprite;
+
+-(void) exampleFlips:(ccTime)delta;
 
 +(CCScene *) scene;
 
